@@ -46,6 +46,7 @@
           />
         </div>
       </div>
+      <!-- Added this select -->
       <div class="selection">
         <select onchange="changer(this)">
           <option>Choose what to do</option>
@@ -176,8 +177,8 @@
         const changeFooterText = function () {
           let footerText = document.querySelector("footer").children[0];
           footerText.onclick = function(event) {
-            let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; //this is some janky ass shit i know i know i know
-            let txtLength = Math.floor(Math.random() * 21);
+            let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; //this jank generates a random string, i was havin fun with it :)
+            let txtLength = Math.floor(Math.random() * 20 + 1);
             let txt = "";
             for (let i=0;i<txtLength;i++) {
               txt += chars.charAt(Math.floor(Math.random() * chars.length))
@@ -207,7 +208,8 @@
 
         // i made a footer
 
-      const changer = function (sel) {
+      // tried to make a dropdown work. Kinda did.
+      const changer = function (sel) { // jank overload
         let sw = sel.value;
         if (sw == 1) {
           changeTitle("some title");
