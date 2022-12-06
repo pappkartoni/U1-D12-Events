@@ -1,7 +1,10 @@
 
-
+<!DOCTYPE html>
 <html>
     <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Something about Events</title>
       <style>
         .myHeading {
           color: red;
@@ -43,7 +46,21 @@
           />
         </div>
       </div>
-  
+      <div class="selection">
+        <select onchange="changer(this)">
+          <option>Choose what to do</option>
+          <option value="1">changeTitle("some title")</option>
+          <option value="2">addClassToTitle())</option>
+          <option value="3">changePcontent("some p content")</option>
+          <option value="4">changeUrls()</option>
+          <option value="5">addToTheSecond("something")</option>
+          <option value="6">addParagraph("add content")</option>
+          <option value="7">firstUlDisappear()</option>
+          <option value="8">paintItGreen()</option>
+          <option value="9">makeItClickable()</option>
+          <option value="10">changeFooterText()</option>
+        </select>
+      </div>
       <footer>
         <p>And this text is just for the exercise too!</p>
         <h2 style="color: red">
@@ -62,8 +79,8 @@
          Write a function for changing the title of the document in something else.
         */
   
-        const changeTitle = function (newTitle) {
-          document.title = newtitle; // now this is a title
+        const changeTitle = function(newTitle) {
+          document.title = newTitle; // now this is a title
           let heading = document.querySelector("h1");
           heading.innerText = newTitle;
         };
@@ -189,6 +206,31 @@
         */
 
         // i made a footer
+
+      const changer = function (sel) {
+        let sw = sel.value;
+        if (sw == 1) {
+          changeTitle("some title");
+        } else if (sw == 2) {
+          addClassToTitle();
+        } else if (sw == 3) {
+          changePcontent("some p content")
+        } else if (sw == 4) {
+          changeUrls();
+        } else if (sw == 5) {
+          addToTheSecond("something");
+        } else if (sw == 6) {
+          addParagraph("add content");
+        } else if (sw == 7) {
+          firstUlDisappear();
+        } else if (sw == 8) {
+          paintItGreen();
+        } else if (sw == 9) {
+          makeItClickable()
+        } else if (sw == 10) {
+          changeFooterText();
+        }
+      }
       </script>
     </body>
   </html>
