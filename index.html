@@ -192,7 +192,7 @@
         */
   
         const inputField = document.getElementById("input-field");
-        inputField.addEventListener("keyup", function (event) { console.log(event.key) });
+        inputField.addEventListener("keyup", function (event) { console.log(event.target.value) }); // i initially had event.key because i misunderstood the task
   
         /* EXERCISE 12
          Create a welcome alert message when the page successfully loads.
